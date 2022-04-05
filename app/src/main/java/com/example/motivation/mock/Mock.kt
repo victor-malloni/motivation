@@ -18,7 +18,7 @@ class Mock {
 
     private val mListPhrases: List<Phrases> = listOf(
         Phrases("frase feliz 1", happy),
-        Phrases("frase feliz 1", happy),
+        Phrases("frase feliz 4", happy),
         Phrases("frase feliz 2", happy),
         Phrases("frase feliz 3", happy),
         Phrases("frase manha 1", sun),

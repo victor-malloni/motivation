@@ -15,4 +15,6 @@ class SecurityPreferences (context: Context){
         return mSharedPreferences.getString (key,"ERROR KEY")
     }
 
+
+
 }

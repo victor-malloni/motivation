@@ -5,6 +5,14 @@
     <color name="colorSecondary">#FF000000</color>
     <color name="colorSecondaryVariant">#FF000000</color>
 
+
+    <color name="colorPrimaryGradient">#FFEF61</color>
+    <color name="colorSecundaryGradient">#FFD56D</color>
+
+    <color name="colorTextInsertName">#170043</color>
+    <color name="colorBtn">#335A31</color>
+    <color name="colorTextBtn">#FFEC95</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 

@@ -6,62 +6,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MainActivity">
+    tools:context=".views.MainActivity"
+    android:background="@drawable/bg_splash">
 
-    <LinearLayout
-        android:id="@+id/linearMenu"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:background="#CACACA"
-        >
-        <ImageView
-            android:id="@+id/imageHappy"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_happy"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:id="@+id/imageRandom"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_random"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:id="@+id/imageSun"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_sun"
-            android:layout_weight="1"
-            />
 
-    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorSecundaryGradient"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></View>
+
+    <ImageView
+        android:id="@+id/imageRandom"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_random_selected"
+        app:layout_constraintEnd_toStartOf="@+id/imageSun"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageHappy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageHappy"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_happy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSun"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/linearMenu"
-        android:text="nome usuario"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textSize="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="nome de usuario"
+        android:textColor="@color/colorTextInsertName"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
     <TextView
         android:id="@+id/textPhase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:text="frase motivacional"
-        app:layout_constraintTop_toBottomOf="@id/textUserName"
+        android:textColor="@color/colorTextInsertName"
+        android:textSize="45dp"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewPhase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUserName"
         />
+
     <Button
         android:id="@+id/btnNewPhase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nova frase"
-        app:layout_constraintTop_toBottomOf="@id/textPhase"
-        />
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        android:textAllCaps="true"
+        android:textColor="@color/colorTextBtn"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorBtn"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

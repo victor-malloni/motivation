@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Motivation">
 
         <activity android:name=".views.MainActivity"
-            android:theme="@style/NoActionBar"
+            android:theme="@style/StatusBarOnColor"
             />
 
         <activity

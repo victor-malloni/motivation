@@ -21,11 +21,17 @@ class Mock {
 
     private val mListPhrases: List<Phrases> = listOf(
 
-        Phrases("Lorem Ipsum is simply dummy text of the", happy),
-       // Phrases("Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the", happy),
-        Phrases("Lorem ItLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text omy text of theexthe", sun),
-       // Phrases("Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the", sun)
-    )
+        Phrases("Um profissional não é alguém que se sacrifica por seu trabalho. Isso é um louco. -Reno (Final Fantasy)", happy),
+        Phrases("A perfeição absoluta será a sua maior fraqueza. Na imperfeição é a essência do ser humano. – Vicent Valentine (Final Fantasy)", happy),
+        Phrases("Quem precisa não escolhe. -Tess (The last of us)", happy),
+        Phrases("Não adianta ser inteligente se você não tornar o mundo melhor. -Elisabet (Horizon Zero Dawn)", happy),
+        Phrases("Treinar na solidão serve apenas para perpetuar erros. – Vesemir (The Witcher)", happy),
+
+        Phrases("A esperança é o que nos fortalece! É por ela que estamos aqui! É por ela que lutamos quando todo o resto está perdido! -Pandora (God of War)", sun),
+        Phrases("Lembre-se de que o excesso de confiança é um assassino lento e insidioso. -Narrador (Darkest Dungeon", sun),
+        Phrases("Palavras não são o único modo de dizer a alguém como você se sente. -Tifa (Final Fantasy)", sun),
+        Phrases("Se estiverem esperando que eu desista, é bom esperarem sentados. -Poppy (League of Legends)", sun),
+        Phrases("Metas comuns estabelecem parcerias impossíveis. -Yennefer (The Witcher), sun)", sun))
 
     fun getPhrase(value: Int): String {
         val filtro = mListPhrases.filter { it -> (it.categoria == value) || value == all }

@@ -66,7 +66,7 @@
         android:layout_marginTop="16dp"
         android:text="nome de usuario"
         android:textAllCaps="true"
-        android:textColor="@color/colorTextInsertName"
+        android:textColor="@color/itemUnSelected"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -81,7 +81,7 @@
         android:layout_marginBottom="100dp"
         android:gravity="center"
         android:text="frase motivacional"
-        android:textColor="@color/colorTextInsertName"
+        android:textColor="@color/white"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="20dp"
         android:autoSizeMaxTextSize="45dp"

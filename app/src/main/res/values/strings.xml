@@ -4,5 +4,6 @@
     <string name="salvar">salvar</string>
     <string name="informe_nome">informe seu nome</string>
 
+    <string name="hyperlink">"https://www.google.com/"</string>
 
 </resources>

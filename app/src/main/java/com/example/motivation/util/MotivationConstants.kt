@@ -3,7 +3,7 @@ package com.example.motivation.util
 class MotivationConstants private constructor() {
 
     object KEY{
-        val personName = "personName"
+        val PERSON_NAME = "personName"
     }
 
     object Phrase_filter {

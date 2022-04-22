@@ -1,14 +1,20 @@
 package com.example.motivation.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import com.example.motivation.R
 import com.example.motivation.mock.Mock
 import com.example.motivation.util.MotivationConstants
 import com.example.motivation.util.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_main.*
+
+
+import android.net.Uri
+import kotlinx.android.synthetic.main.activity_splash.*
 import java.security.Security
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -16,6 +22,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mFilter: Int = MotivationConstants.Phrase_filter.all
     private lateinit var mSecurityPreferences: SecurityPreferences
     private val mMock = Mock()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +39,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         selectFilter(R.id.imageRandom)
         resetarFrase()
         verifyUserName()
+
+        //botao link curriculo
+      /*  btnLinkCurriculo.setOnClickListener(){
+            val openUrl = Intent(android.content.Intent.ACTION_VIEW)
+            val url = getString(R.string.hyperlink)
+            openUrl.data=Uri.parse("$url")
+            startActivity(openUrl)
+        }*/
     }
 
 
     private fun verifyUserName(){
-        textUserName.text = mSecurityPreferences.getStoredString(MotivationConstants.KEY.personName)
+        val name = mSecurityPreferences.getStoredString(MotivationConstants.KEY.PERSON_NAME)
+        textUserName.text="Olá, $name!"
     }
 
     override fun onClick(view: View) {
@@ -48,12 +65,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
     private fun setListeners() {
         imageRandom.setOnClickListener(this)
         imageHappy.setOnClickListener(this)
         imageSun.setOnClickListener(this)
         btnNewPhase.setOnClickListener(this)
+
     }
+
 
     private fun resetarFrase() {
         textPhase.text = mMock.getPhrase(mFilter)

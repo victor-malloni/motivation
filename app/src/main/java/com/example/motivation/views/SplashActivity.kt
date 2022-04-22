@@ -1,6 +1,7 @@
 package com.example.motivation.views
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,15 +23,27 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         mSecurity= SecurityPreferences(this)
 
         btnSave.setOnClickListener(this)
+
+        setListeners()
+
         verifyUserName()
     }
 
+    private fun setListeners(){
+        btnLinkCurriculo.setOnClickListener({openLink()})
+    }
+    private fun openLink() {
+        val openUrl = Intent(android.content.Intent.ACTION_VIEW)
+        val url = getString(R.string.hyperlink)
+        openUrl.data= Uri.parse("$url")
+        startActivity(openUrl)}
+
     private fun verifyUserName(){
-        val userName = mSecurity.getStoredString(MotivationConstants.KEY.personName)
+        val userName = mSecurity.getStoredString(MotivationConstants.KEY.PERSON_NAME)
         if (userName != ""){
             startActivity(Intent(this, MainActivity::class.java))
         }
-        editName.setText(mSecurity.getStoredString(MotivationConstants.KEY.personName))
+        editName.setText(mSecurity.getStoredString(MotivationConstants.KEY.PERSON_NAME))
     }
 
     override fun onClick(view: View) {
@@ -40,13 +53,15 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
+
     private fun handleSave(){
         val name: String = editName.text.toString()
 
         if (name==""){
             Toast.makeText(this, getString(R.string.informe_nome), Toast.LENGTH_LONG).show()
         } else {
-            mSecurity.storeString(MotivationConstants.KEY.personName, name)
+            mSecurity.storeString(MotivationConstants.KEY.PERSON_NAME, name)
 
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

@@ -20,22 +20,11 @@ class Mock {
 
 
     private val mListPhrases: List<Phrases> = listOf(
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
-        Phrases("", happy),
 
-        Phrases("", sun),
-        Phrases("", sun),
-        Phrases("", sun),
-        Phrases("", sun),
+        Phrases("Lorem Ipsum is simply dummy text of the", happy),
+       // Phrases("Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the", happy),
+        Phrases("Lorem ItLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text omy text of theexthe", sun),
+       // Phrases("Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the", sun)
     )
 
     fun getPhrase(value: Int): String {

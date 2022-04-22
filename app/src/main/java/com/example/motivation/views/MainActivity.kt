@@ -14,6 +14,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 import android.net.Uri
+import android.util.TypedValue
+import androidx.annotation.Px
+import androidx.core.widget.TextViewCompat
 import kotlinx.android.synthetic.main.activity_splash.*
 import java.security.Security
 
@@ -40,6 +43,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         resetarFrase()
         verifyUserName()
 
+       // TextViewCompat.setAutoSizeTextTypeWithDefaults(textPhase, TypedValue.COMPLEX_UNIT_PX)
+
         //botao link curriculo
       /*  btnLinkCurriculo.setOnClickListener(){
             val openUrl = Intent(android.content.Intent.ACTION_VIEW)
@@ -50,10 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
-    private fun verifyUserName(){
-        val name = mSecurityPreferences.getStoredString(MotivationConstants.KEY.PERSON_NAME)
-        textUserName.text="Olá, $name!"
-    }
+
 
     override fun onClick(view: View) {
         var listaId = listOf(R.id.imageHappy, R.id.imageSun, R.id.imageRandom)
@@ -80,7 +82,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun selectFilter(id: Int) {
-
         imageHappy.setImageResource(R.drawable.ic_happy)
         imageRandom.setImageResource(R.drawable.ic_random)
         imageSun.setImageResource(R.drawable.ic_sun)
@@ -95,5 +96,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             mFilter = MotivationConstants.Phrase_filter.all
             imageRandom.setImageResource(R.drawable.ic_random_selected)
         }
+        verifyUserName()
+    }
+
+    private fun verifyUserName(){
+        val name = mSecurityPreferences.getStoredString(MotivationConstants.KEY.PERSON_NAME)
+        //textUserName.text="Olá, $name!"
+        val opcoes = mFilter
+
+        if (opcoes==1){
+            textUserName.text="$name, es a questão:"
+        } else if(opcoes==2){
+            textUserName.text="Elementar meu caso Wats... ops, $name!"
+        } else
+            textUserName.text="Reflexões, apenas reflexões, $name."
     }
 }

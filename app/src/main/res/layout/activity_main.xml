@@ -6,8 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MainActivity"
-    android:background="@drawable/bg_splash">
+    android:background="@drawable/bg_splash"
+    tools:context=".views.MainActivity">
 
 
     <View
@@ -19,7 +19,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></View>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
 
     <ImageView
         android:id="@+id/imageRandom"
@@ -59,49 +61,60 @@
         android:id="@+id/textUserName"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:textSize="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="nome de usuario"
-        android:textColor="@color/colorTextInsertName"
         android:textAllCaps="true"
+        android:textColor="@color/colorTextInsertName"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/textPhase"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="frase motivacional"
         android:textColor="@color/colorTextInsertName"
         android:textSize="30dp"
 
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintBottom_toTopOf="@+id/btnNewPhase"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUserName"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textUserName" />
 
     <Button
         android:id="@+id/btnNewPhase"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/colorBtn"
         android:text="+"
         android:textAllCaps="true"
         android:textColor="@color/colorTextBtn"
         android:textSize="40dp"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/colorBtn"/>
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
+    <Button
+        android:id="@+id/btnLinkCurriculo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ic_curriculo"
+        android:layout_marginBottom="16dp"
+        app:circularflow_radiusInDP="15"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.motivation.views
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import com.example.motivation.R
 import com.example.motivation.mock.Mock
 import com.example.motivation.util.MotivationConstants
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         mSecurityPreferences = SecurityPreferences(this)
 
         //eventos
@@ -34,7 +36,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun verifyUserName(){
         textUserName.text = mSecurityPreferences.getStoredString(MotivationConstants.KEY.personName)
-
     }
 
     override fun onClick(view: View) {

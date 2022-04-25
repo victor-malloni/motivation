@@ -21,17 +21,17 @@ class Mock {
 
     private val mListPhrases: List<Phrases> = listOf(
 
-        Phrases("Um profissional não é alguém que se sacrifica por seu trabalho. Isso é um louco. -Reno (Final Fantasy)", happy),
-        Phrases("A perfeição absoluta será a sua maior fraqueza. Na imperfeição é a essência do ser humano. – Vicent Valentine (Final Fantasy)", happy),
-        Phrases("Quem precisa não escolhe. -Tess (The last of us)", happy),
-        Phrases("Não adianta ser inteligente se você não tornar o mundo melhor. -Elisabet (Horizon Zero Dawn)", happy),
-        Phrases("Treinar na solidão serve apenas para perpetuar erros. – Vesemir (The Witcher)", happy),
+        Phrases("Um profissional não é alguém que se sacrifica por seu trabalho. Isso é um louco.\n -Reno (Final Fantasy)", happy),
+        Phrases("A perfeição absoluta será a sua maior fraqueza. Na imperfeição é a essência do ser humano.\n –Vicent Valentine (Final Fantasy)", happy),
+        Phrases("Quem precisa não escolhe.\n -Tess (The last of us)", happy),
+        Phrases("Não adianta ser inteligente se você não tornar o mundo melhor.\n -Elisabet (Horizon Zero Dawn)", happy),
+        Phrases("Treinar na solidão serve apenas para perpetuar erros.\n – Vesemir (The Witcher)", happy),
 
-        Phrases("A esperança é o que nos fortalece! É por ela que estamos aqui! É por ela que lutamos quando todo o resto está perdido! -Pandora (God of War)", sun),
-        Phrases("Lembre-se de que o excesso de confiança é um assassino lento e insidioso. -Narrador (Darkest Dungeon", sun),
-        Phrases("Palavras não são o único modo de dizer a alguém como você se sente. -Tifa (Final Fantasy)", sun),
-        Phrases("Se estiverem esperando que eu desista, é bom esperarem sentados. -Poppy (League of Legends)", sun),
-        Phrases("Metas comuns estabelecem parcerias impossíveis. -Yennefer (The Witcher), sun)", sun))
+        Phrases("A esperança é o que nos fortalece! É por ela que estamos aqui! É por ela que lutamos quando todo o resto está perdido!\n -Pandora (God of War)", sun),
+        Phrases("Lembre-se de que o excesso de confiança é um assassino lento e insidioso.\n -Narrador (Darkest Dungeon)", sun),
+        Phrases("Palavras não são o único modo de dizer a alguém como você se sente.\n -Tifa (Final Fantasy)", sun),
+        Phrases("Se estiverem esperando que eu desista, é bom esperarem sentados.\n -Poppy (League of Legends)", sun),
+        Phrases("Metas comuns estabelecem parcerias impossíveis.\n -Yennefer (The Witcher)", sun))
 
     fun getPhrase(value: Int): String {
         val filtro = mListPhrases.filter { it -> (it.categoria == value) || value == all }
